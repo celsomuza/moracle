@@ -13,6 +13,8 @@
 		EA0FA37927A99C3E00964033 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0FA37827A99C3E00964033 /* MessagesViewController.swift */; };
 		EA0FA37C27A99C3E00964033 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0FA37A27A99C3E00964033 /* MainInterface.storyboard */; };
 		EA0FA37E27A99C3F00964033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0FA37D27A99C3F00964033 /* Assets.xcassets */; };
+		EA75BA1627B1A99100525BB3 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA75BA1527B1A99100525BB3 /* Stickers.xcassets */; };
+		EACF287327B19CD00074B4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0FA37D27A99C3F00964033 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		EA0FA37B27A99C3E00964033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		EA0FA37D27A99C3F00964033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA0FA37F27A99C3F00964033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA75BA1327B1A98E00525BB3 /* stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA75BA1527B1A99100525BB3 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		EA75BA1727B1A99100525BB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,7 @@
 			children = (
 				EA0FA36927A99C3B00964033 /* moracleapp */,
 				EA0FA37727A99C3E00964033 /* moracleapp MessagesExtension */,
+				EA75BA1427B1A98E00525BB3 /* stickers */,
 				EA0FA37427A99C3E00964033 /* Frameworks */,
 				EA0FA36827A99C3B00964033 /* Products */,
 			);
@@ -77,6 +83,7 @@
 			children = (
 				EA0FA36727A99C3B00964033 /* moracleapp.app */,
 				EA0FA37027A99C3E00964033 /* moracleapp MessagesExtension.appex */,
+				EA75BA1327B1A98E00525BB3 /* stickers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +113,15 @@
 				EA0FA37F27A99C3F00964033 /* Info.plist */,
 			);
 			path = "moracleapp MessagesExtension";
+			sourceTree = "<group>";
+		};
+		EA75BA1427B1A98E00525BB3 /* stickers */ = {
+			isa = PBXGroup;
+			children = (
+				EA75BA1527B1A99100525BB3 /* Stickers.xcassets */,
+				EA75BA1727B1A99100525BB3 /* Info.plist */,
+			);
+			path = stickers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +161,21 @@
 			productReference = EA0FA37027A99C3E00964033 /* moracleapp MessagesExtension.appex */;
 			productType = "com.apple.product-type.app-extension.messages";
 		};
+		EA75BA1227B1A98E00525BB3 /* stickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA75BA1827B1A99100525BB3 /* Build configuration list for PBXNativeTarget "stickers" */;
+			buildPhases = (
+				EA75BA1127B1A98E00525BB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = stickers;
+			productName = stickers;
+			productReference = EA75BA1327B1A98E00525BB3 /* stickers.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -159,6 +190,9 @@
 						CreatedOnToolsVersion = 13.0;
 					};
 					EA0FA36F27A99C3E00964033 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					EA75BA1227B1A98E00525BB3 = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
@@ -178,6 +212,7 @@
 			targets = (
 				EA0FA36627A99C3B00964033 /* moracleapp */,
 				EA0FA36F27A99C3E00964033 /* moracleapp MessagesExtension */,
+				EA75BA1227B1A98E00525BB3 /* stickers */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACF287327B19CD00074B4F1 /* Assets.xcassets in Resources */,
 				EA0FA36B27A99C3E00964033 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +233,14 @@
 			files = (
 				EA0FA37E27A99C3F00964033 /* Assets.xcassets in Resources */,
 				EA0FA37C27A99C3E00964033 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA75BA1127B1A98E00525BB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA75BA1627B1A99100525BB3 /* Stickers.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +409,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = muzinha.moracleapp.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -391,7 +435,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = muzinha.moracleapp.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -406,6 +450,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U9236D2UC6;
@@ -427,6 +472,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U9236D2UC6;
@@ -440,6 +486,44 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		EA75BA1927B1A99100525BB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U9236D2UC6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = stickers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = muzinha.stickers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA75BA1A27B1A99100525BB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U9236D2UC6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = stickers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = muzinha.stickers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -469,6 +553,15 @@
 			buildConfigurations = (
 				EA0FA38727A99C3F00964033 /* Debug */,
 				EA0FA38827A99C3F00964033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA75BA1827B1A99100525BB3 /* Build configuration list for PBXNativeTarget "stickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA75BA1927B1A99100525BB3 /* Debug */,
+				EA75BA1A27B1A99100525BB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

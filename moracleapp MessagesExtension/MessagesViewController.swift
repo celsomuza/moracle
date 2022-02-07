@@ -16,6 +16,7 @@ class MessagesViewController: MSMessagesAppViewController {
     @IBOutlet weak var orientação: UITextView!
     @IBOutlet weak var wallpaper: UIImageView!
     @IBOutlet weak var print: UIButton!
+    @IBOutlet weak var notificacao: UILabel!
     
     var indiceSelecionado : Int = -1
     
@@ -37,11 +38,11 @@ class MessagesViewController: MSMessagesAppViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.wallpaper.contentMode = .scaleAspectFill
-        self.carta.isHidden = true
-        self.titulodacarta.isHidden = true
-        self.subtitulodacarta.isHidden = true
-        self.orientação.isHidden = true
+    //    self.carta.isHidden = true
+     //   self.titulodacarta.isHidden = true
+      //  self.subtitulodacarta.isHidden = true
+      //  self.orientação.isHidden = true
+        desenhaTela()
         
     }
     override func becomeFirstResponder() -> Bool {
@@ -55,10 +56,10 @@ class MessagesViewController: MSMessagesAppViewController {
            /// let textoEnviado = URLQueryItem(name: "orientacao", value: String(texto))
             let indiceEnviado = URLQueryItem(name: "indice", value: String(indiceSelecionado))
             componentes.queryItems = [indiceEnviado]
-            self.carta.isHidden = false
-            self.titulodacarta.isHidden = false
-            self.subtitulodacarta.isHidden = false
-            self.orientação.isHidden = false
+         //   self.carta.isHidden = false
+          //  self.titulodacarta.isHidden = false
+          //  self.subtitulodacarta.isHidden = false
+         //   self.orientação.isHidden = false
             let layout = MSMessageTemplateLayout()
             layout.image = carta.image
             let conversation = activeConversation
@@ -67,7 +68,8 @@ class MessagesViewController: MSMessagesAppViewController {
             messages.layout = layout
             messages.url = componentes.url
             conversation?.insert(messages)
-            requestPresentationStyle(.compact)
+            requestPresentationStyle(.expanded)
+            desenhaTela()
             
             
         }
@@ -95,10 +97,20 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     func desenhaTela() {
-        carta.image = UIImage(named: cartas[indiceSelecionado])
-        titulodacarta.text = titulos[indiceSelecionado]
-        subtitulodacarta.text = subtitulos[indiceSelecionado]
-        orientação.text = orientações[indiceSelecionado]
+        if indiceSelecionado == -1 {
+            carta.image = UIImage (named:"verse")
+            titulodacarta.text = "Moracle"
+            subtitulodacarta.text = "O seu oráculo virtual!"
+            orientação.text = ""
+            notificacao.text = "Chacoalhe seu dispositivo e embaralhe seu oráculo!"
+                
+        }else {
+            carta.image = UIImage(named: cartas[indiceSelecionado])
+            titulodacarta.text = titulos[indiceSelecionado]
+            subtitulodacarta.text = subtitulos[indiceSelecionado]
+            orientação.text = orientações[indiceSelecionado]
+            notificacao.text = "Chacoalhe seu dispositivo e embaralhe seu oráculo!"
+        }
     }
 
     
@@ -132,6 +144,8 @@ class MessagesViewController: MSMessagesAppViewController {
     }
 
     override func didStartSending(_ message: MSMessage, conversation: MSConversation) {
+        desenhaTela()
+        self.dismiss()
         
     }
 
