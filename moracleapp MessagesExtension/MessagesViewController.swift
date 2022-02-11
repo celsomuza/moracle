@@ -100,16 +100,16 @@ class MessagesViewController: MSMessagesAppViewController {
         if indiceSelecionado == -1 {
             carta.image = UIImage (named:"verse")
             titulodacarta.text = "Moracle"
-            subtitulodacarta.text = "O seu oráculo virtual!"
+            subtitulodacarta.text = "O seu oráculo virtual!".localized()
             orientação.text = ""
-            notificacao.text = "Chacoalhe seu dispositivo e embaralhe seu oráculo!"
+            notificacao.text = "Chacoalhe seu dispositivo e embaralhe seu oráculo!".localized()
                 
         }else {
             carta.image = UIImage(named: cartas[indiceSelecionado])
             titulodacarta.text = titulos[indiceSelecionado]
             subtitulodacarta.text = subtitulos[indiceSelecionado]
             orientação.text = orientações[indiceSelecionado]
-            notificacao.text = "Chacoalhe seu dispositivo e embaralhe seu oráculo!"
+            notificacao.text = "Chacoalhe seu dispositivo e embaralhe seu oráculo!".localized()
         }
     }
 
